@@ -1,0 +1,42 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-dark: #0d1a0d;
+  --green-mid: #2e7d32;
+  --green-light: #69f0ae;
+  --text-primary: #e8f5e9;
+  --text-secondary: #a5d6a7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--green-dark);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root { min-height: 100vh; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a120a; }
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 160, 74, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(74, 160, 74, 0.65); }
+
+/* Selection */
+::selection {
+  background: rgba(105, 240, 174, 0.25);
+  color: #e8f5e9;
+}

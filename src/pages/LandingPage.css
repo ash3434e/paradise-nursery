@@ -1,0 +1,122 @@
+.landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    url('https://images.unsplash.com/photo-1545241047-6083a3684587?w=1800&q=85') center center / cover no-repeat;
+  overflow: hidden;
+}
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(5, 15, 5, 0.82) 0%,
+    rgba(10, 30, 10, 0.72) 50%,
+    rgba(5, 20, 5, 0.85) 100%
+  );
+}
+
+.landing-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+  animation: fadeUp 0.9s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.landing-badge {
+  display: inline-block;
+  background: rgba(105, 240, 174, 0.12);
+  border: 1px solid rgba(105, 240, 174, 0.35);
+  color: #69f0ae;
+  padding: 0.35rem 1.1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.landing-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: #e8f5e9;
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+}
+
+.landing-tagline {
+  font-size: 1.15rem;
+  color: #a5d6a7;
+  font-style: italic;
+  margin: 0 0 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.landing-desc {
+  font-size: 0.97rem;
+  color: #c8e6c9;
+  line-height: 1.75;
+  margin: 0 auto 2rem;
+  max-width: 580px;
+}
+
+.landing-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #69f0ae;
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: #81c784;
+  letter-spacing: 0.05em;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(105, 240, 174, 0.25);
+}
+
+.get-started-btn {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  box-shadow: 0 6px 30px rgba(76, 175, 80, 0.4);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.get-started-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 40px rgba(76, 175, 80, 0.6);
+}
